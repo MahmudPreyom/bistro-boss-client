@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaUtensils, FaHome, FaBook, FaUsers } from 'react-icons/fa';
+import { FaShoppingCart, FaWallet, FaUtensils, FaHome, FaBook, FaUsers, FaCalendarAlt } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
                         </> : <>
                             <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
-                            <li><NavLink to="/dashboard/reservations"><FaUtensils></FaUtensils> Reservations</NavLink></li>
+                            <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
                             <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
                             <li>
                                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart <span className="badge inline badge-secondary">+{cart?.length || 0}</span></NavLink>
